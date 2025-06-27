@@ -1,0 +1,5 @@
+Current pipeline idea
+ - Get data from newspaper articles or stock exchange news
+ - Use NER ("urchade/gliner_large-v2.1") to extract entities
+ - Use Sentiment analysis (unkown?) to analyze sentiment
+ - Find ticker from NER results, some sort of mapping?
