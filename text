@@ -3,3 +3,26 @@ Current pipeline idea
  - Use NER ("urchade/gliner_large-v2.1") to extract entities
  - Use Sentiment analysis (unkown?) to analyze sentiment
  - Find ticker from NER results, some sort of mapping?
+
+
+- Current files and their uses/purpose:
+    - scraper_newsarticles.py: Scrapes news articles from a website and extracts text.
+    - company_ticker_retriever.py: Retrieves data from euronext regarding oslo stock exchange companies. also pairs some of them with a industry classification
+    - backtrader_test.py: Backtrader script for testing trading strategies. Have not found what library to use yet, so its for testing purposes only.
+    - trainer.py: Trains sentiment analysis model (BERT) on financial news. Also does some preprocessing
+
+    - sentiment_analysis.ipynb: Demo of using FinBERT for sentiment analysis on financial sentences. 
+    - tester.ipynb: Loads a trained model and evaluates on test set
+    - trainer.ipynb: An interactive version of trainer.py, includes plots and such
+    - trainer_wandb.ipynb: Like trainer.ipynb, but uses wandb for hyperparameter tuning (sweeps) and logging
+
+    - Euronext_Equities_*.csv: Contains data from euronext regarding oslo stock exchange companies
+    - financial_phrasebank.csv: Contains financial phrases for training sentiment analysis models
+    - native_norwegian_financial_phrasebank: Husker ikke helt hvor jeg fant denne... Burde undersøkes litt
+    - oslo_stock_exchange_companies.csv: Resulting file from running company-ticker-retriever.py
+    - test.csv: Test file from financial_phrasebank
+    - train.csv: Train file from financial_phrasebank
+    - validation.csv: Validation file from financial_phrasebank
+
+    texts: this file, to keep track of stuff
+    README.md: Information about project, should be updated
